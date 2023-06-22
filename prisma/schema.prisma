@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Adidas {
+  url            String
+  name           String
+  sku            String
+  currency       String
+  color          String
+  source         String
+  source_website String
+  breadcrumbs    String
+  description    String
+  brand          String
+  images         String
+  country        String
+  language       String
+  index          Int      @id
+  selling_price  Int
+  original_price String
+  average_rating Float
+  crawled_at     DateTime
+  reviews_count  Int
+  availability   String
+  category       String
+}
